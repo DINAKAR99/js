@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>type conversion</title>
+</head>
+<body>
+    
+    <h1>type converison</h1>
+    <script>
+        let d='haha'
+        console.log(d)
+
+        let d1=String(d)
+        console.log(typeof(d1))
+
+        console.log(typeof toString(d))
+
+        let b=false
+        let c= String(b)
+        console.log(typeof(c))
+
+        //numeric
+
+      let val='9199.1'
+      console.log(val+1)
+      let val1=Number(val)
+      console.log(val1+0.1)
+
+
+      ///////////
+
+      //parseint parse float
+
+      let num=parseInt(val)
+      console.log(typeof num)
+
+      ////////////
+      //undefinded----.nan
+      //null---0
+      //  true=>1
+      // false-0
+
+      console.log(Number(null))
+      console.log(Number(undefined))
+
+
+      /////bool conversion for numbwrs and strings
+      //undef--false
+      //null--false
+      //0--false
+      //true for all words
+      
+      
+
+      let x1=99
+      console.log(typeof x1)
+
+
+      console.log(typeof (Boolean(x1)))
+      console.log(Boolean(x1))
+
+      ////////
+
+
+
+
+
+
+    </script>
+</body>
+</html>

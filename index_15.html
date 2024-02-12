@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js DOM get and set attributes</title>
+</head>
+<body>
+    <a id='url' class="alert alert-danger " href="https://www.google.com">GOOGLE</a>
+
+    <button onclick="getAtt()">get </button>
+    <button onclick="setAtt()">set </button>
+    <button onclick="removAtt()">remo </button>
+
+    <script>
+
+        const getAtt=()=>{
+            let h =document.getElementById('url')
+
+            console.log(h.getAttribute('href'))
+            console.log(h.getAttribute('id'))
+            console.log(h.getAttribute('class'))
+           
+        }
+
+        const setAtt=()=>{
+            let h =document.getElementById('url')
+            h.setAttribute('href','https://yahoo.com')
+           h.innerHTML='yahoo'
+        }
+
+
+        ///////////removing
+
+        
+        const removAtt=()=>{
+            document.getElementById('url').removeAttribute('href')
+        }
+    </script>
+</body>
+</html>

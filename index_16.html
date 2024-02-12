@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation</title>
+</head>
+<body>
+    <div id="main">
+        <!-- before -->
+        <h1 id="title">hello</h1>
+        <p id='hint'> this is a simplesss para</p>
+        <!-- div element -->
+
+    </div>
+
+    <button onclick="addNode()">Add Node</button>
+    <script>
+
+
+function addNode(){
+    console.log('adding node')
+    // creating node
+    let divElement =document.createElement('div')
+    console.log(divElement)
+
+    // creatw a text node
+
+    let textElement=document.createTextNode('wow this is magic')
+
+
+    // adding text to div
+
+    divElement.appendChild(textElement)
+}
+
+
+    ////adding to the main  div
+    let mainelement=document.getElementById('main')
+  mainelement.appendChild(divElement)
+
+  //inserting before
+
+  let title1=document.getElementById('hint')
+  title1.insertBefore(divElement,title1)
+
+
+  /////
+  title1.innerHTML="heyy haloo"
+
+  //removing
+
+//   mainelement.removeChild(title1)
+
+  /////
+
+  let newelem=document.createElement('h2')
+  let f1= document.createTextNode('hullo h2 text replace ')
+  newelem.appendChild(f1)
+  console.log(newelem)
+
+  let oldelem =document.getElementById('hint')
+
+mainelement.replaceChild(newelem,oldelem)
+
+
+
+    </script>
+</body>
+</html>

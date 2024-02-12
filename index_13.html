@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM slectors</title>
+
+   
+</head>
+<body>
+    <h1>dom slectors</h1>
+   <h2 id="banner"> Cenetr for good gov</h2>
+   <h1 class="myclass"> hellow orld</h1>
+   <h1 class="myclass"> hellow orld</h1>
+   <h1 class="myclass"> hellow   orld</h1>
+
+   <script>
+
+    console.log('inside body')
+    let ht=document.documentElement
+    console.log(ht)
+    let he=document.head
+    console.log(he)
+    let hd=document.body
+    console.log(hd)
+    let ti=document.title
+    console.log(ti)
+
+
+    //accessing the elements by id
+
+    let h3=document.getElementById('banner')
+    console.log(h3)
+    h3.innerHTML='changed'//// to change dynamically
+
+    h3.style.color='red'
+    h3.style.backgroundColor  ='blue'
+
+    let el=document.getElementsByClassName('myclass')
+    console.log(el)
+    
+    el.innerHTML='helmo'
+    console.log(el)
+
+    ///loooping
+
+    // for(i of el)
+    // {
+    //     console.log(i)
+    //     i.style.color='yellow'
+    // }
+
+
+    ////sleecting element  by tagname
+
+
+    let lss=document.querySelector('.myclass') ///returns single element for multi use queryselectorall ans specifyy ' . ' also
+    console.log(lss)
+    let ls=document.querySelectorAll('.myclass') /// use queryselectorall
+    console.log(ls)
+
+    for(i of ls){
+        console.log(i)
+        i.style.color='brown'
+    }
+   </script>
+    
+</body>
+</html>

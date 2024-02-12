@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="contain">
+      <h1>Product Details</h1>
+
+      <div class="card">
+        <div class="one">
+            <form action="https://formsubmit.co/karenguladinakar@gmail.com" method="POST" id="form1">
+          <label for="category">category :</label>
+          <select name="category" id="category">
+            <option value="" hidden>Select</option>
+            <option value="electronics">Electronics</option>
+            <option value="grocery">Grocery</option>
+            <!-- Add more categories as needed -->
+          </select>
+        </div>
+
+        <div class="two">
+          <label for="product" >product :</label>
+          <select id="product" name="product">
+            <!-- Options will be dynamically populated based on the selected category -->
+          </select>
+        </div>
+
+        <div>
+          <label for="quantity">quantity : </label>
+          <input type="text" id="quantity" name="quantity" />
+        </div>
+
+        <div>
+          <label for="price">price :</label>
+          <input type="text" id="price" name="price"/>
+        </div>
+
+        <button type="submit" value="Submit">submit</button>
+
+        <button type="reset" value="reset">clear</button>
+    </form>
+      </div>
+    </div>
+
+    <script>
+
+
+  document.getElementById("form1").addEventListener("submit", function (event) {
+    // Prevent the form from actually submitting
+
+    // Your code to run when the submit button is clicked goes here
+    // You can call functions or write custom code as needed
+
+    // Example: Display an alert when the submit button is clicked
+    var c=getElementById("quantity").value
+    alert("Submit button clicked!"+c);
+  });
+
+
+
+      var electronicsProducts = ["television", "laptop", "phone"];
+      var groceryProducts = ["soap", "powder"];
+
+      var categorySelect = document.getElementById("category");
+      var productSelect = document.getElementById("product");
+
+      categorySelect.addEventListener("change", function () {
+        // Clear previous options
+        productSelect.innerHTML = "";
+
+        // Get selected category
+        var selectedCategory = categorySelect.value;
+
+        // Populate product options based on the selected category
+        var products =
+          selectedCategory === "electronics"
+            ? electronicsProducts
+            : groceryProducts;
+
+        // Add options to the product select element
+        products.forEach(function (product) {
+          var option = document.createElement("option");
+          // option.value = product.toLowerCase(); // Set the value as the lowercase product name
+          option.text = product;
+          productSelect.appendChild(option);
+        });
+      });
+
+
+      
+    </script>
+
+    <style>
+      /* Optional: Style the select elements */
+      select {
+        margin-bottom: 10px;
+        padding: 5px;
+      }
+      input {
+        margin-bottom: 10px;
+        padding: 5px;
+      }
+      button {
+        margin-bottom: 10px;
+        padding: 5px;
+      }
+      body {
+        background-color: lightskyblue;
+      }
+      .contain {
+        text-align: center;
+      }
+      .card {
+        border: 20px white solid;
+        margin: 20px;
+         
+      }
+    </style>
+  </body>
+</html>

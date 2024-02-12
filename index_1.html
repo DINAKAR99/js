@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variables</title>
+</head>
+<body>
+   <h1>
+    variables in js
+   </h1> 
+   <script>
+    let message;
+    message='hey,how are u?'
+    console.log(message);
+
+     let a=23,b=3,c=44;
+     console.log(a);
+     console.log(b);
+     console.log(c);
+
+     message='hey im fine';
+     console.log(message);
+
+     const user='hiii';
+     console.log(user);
+
+    //  user='shaha' //cant assign to const again
+
+    if(5>2)
+    {
+        let address='hyderabad'
+        console.log(address)
+        var bg='sam';
+    }
+console.log(bg) //works for -- var-- outside of block it has global scope
+bg='dam' 
+// console.log(address)//index_1.html:35 Uncaught ReferenceError: address is not defined for accesing let 
+console.log(bg)
+address='daa';
+console.log(address)
+
+
+
+   </script>
+</body>
+</html>

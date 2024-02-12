@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>common array operations</title>
+</head>
+<body>
+<h1>common arrray operations</h1>    
+<script>
+    let arr=[2,3,4,5]
+
+    ////looping by for each
+let sum=0
+    arr.forEach((item,index)=>{
+        console.log(`${index}---> ${item}`)
+        sum=sum+item
+    })
+    console.log(sum)
+
+    arr.pop() /// removes from end
+    console.log(arr)
+    arr.shift() /// removes from start 
+    console.log(arr)
+
+    arr.unshift('223dd') /// add from start 
+    console.log(arr)
+console.log(arr.indexOf('223dd'))
+
+console.log(arr.splice(1,2))///pos,numberof elem
+let arrcopy=arr.slice()//copy an array
+console.log(arrcopy)
+
+
+</script>
+</body>
+</html>

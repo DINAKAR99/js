@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM STYLING</title>
+    <style>
+        .red{
+            background-color: red;
+        }
+            </style>
+</head>
+<body>
+    <button onclick="changestyle()"> change style</button>
+    <button onclick="getstyle()"> get style</button>
+    <h2 id="main">this is first heading</h2>
+    <h2 id="sub"> this is second heading</h2>
+    <h2 id="subsub">this is third heading</h2>
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium pariatur, enim ipsa quae deserunt eveniet beatae deleniti. Soluta, numquam iste!</p>
+
+<script>
+//select the elemtne
+    let mainob=document.getElementById('main')
+
+    ///applying style on elemnt 
+
+    
+
+    mainob.className='red'
+
+
+    //get style
+    const getstyle=()=>
+    {
+        console.log(mainob.style.color)
+    }
+    const changestyle=()=>
+    {
+        mainob.style.color='purple'
+        document.body.style.backgroundColor='orange'
+
+        mainob.style.color='blue'
+    mainob.style.fontSize='60px'
+    mainob.style.border='1px solid red'
+    mainob.style.padding='50px'
+    mainob.style.backgroundColor='yellow'
+    }
+
+    let styles= window.getComputedStyle(mainob)
+    console.log(styles)
+    console.log(styles.getPropertyValue('color'))
+
+
+</script>
+
+
+
+
+</body>
+</html>

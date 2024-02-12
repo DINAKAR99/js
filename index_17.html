@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOm navigation</title>
+
+</head>
+<body>
+    <div id="container">
+        <h1 id="title">
+            we are learnig js
+
+        </h1>
+        <p id="content">
+            <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, praesentium!</span>
+        </p>
+        <h2> this is last child</h2>
+    </div>
+
+    <button onclick="btnClicked()">click me for magic</button>
+
+    <script>
+        function btnClicked(){
+            let containerOb=document.getElementById('container')
+            // console.log(containerOb)
+            // console.log(containerOb.firstChild.nodeName)
+            console.log(containerOb.firstElementChild.nodeName)
+
+            let firstChild=containerOb.firstElementChild
+            console.log(firstChild)
+
+            firstChild.innerHTML='hemloooo'
+
+// last child
+
+let lastchild=containerOb.lastElementChild
+            console.log(lastchild)
+
+            lastchild.innerHTML='hemloooo'
+
+            // ------children
+
+
+            let childnodes=containerOb.children
+            console.log(childnodes)
+
+            for(n of childnodes)
+            {
+                console.log(n.nodeName)
+            }
+
+            // ------- parentnode
+
+            let paren=containerOb.parentNode
+            console.log(paren.nodeName)
+
+            //prev sibling and next sibling
+
+            // let tiltleob=document.getElementById('title')
+            // let nexts=tiltleob.nextSibling
+            // console.log(nexts)
+
+            ///for elemet
+
+            let tiltleob=document.getElementById('title')
+            let nexts=tiltleob.nextElementSibling
+            console.log(nexts.nextElementSibling)
+            console.log(nexts.nextElementSibling.nodeName)
+            console.log(nexts.previousElementSibling.nodeName)
+
+
+
+        }
+    </script>
+</body>
+</html>

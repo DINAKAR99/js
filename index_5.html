@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string handling functions</title>
+</head>
+<body>
+    <h1>string functions</h1>
+    <script>
+        let s='i like js'
+        console.log(s)
+
+        let len=s.length
+        console.log('the lenght is ' ,len)
+
+        let s1='i like css'
+        console.log(s.concat("   ",s1))
+
+        console.log(s.charAt(2))
+
+        console.log(s.indexOf('e'))
+
+       console.log(s1.lastIndexOf('s'))
+       console.log(s1.toUpperCase())
+
+       console.log(s1.substring(2,5))
+       console.log(s1.substring(5))
+       console.log(s1.startsWith('i like'))
+       console.log(s1.endsWith('css'))
+
+
+
+       console.log(s1.split(""))
+       let sp= s1.split("")
+       console.log(typeof s1.split(""))
+       console.log(sp[0])
+      
+
+       //trim
+        let s2="            hiiii"
+   
+       console.log(s2.trim())
+
+
+
+
+
+
+    </script>
+</body>
+</html>

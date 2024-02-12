@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event and event handling</title>
+</head>
+<body>
+    <button onclick="alert('this is click event')">click me</button>
+    <button onclick="myfun()"> lckock me</button>
+    <input type="text" id="field" onfocus="change_color()" onkeyup="update_text()">
+    <h1 id="heading">dummy test </h1>
+
+
+    <form action="test1.html"  onsubmit="form_submit(event)">
+        <button type="button" >submit</button>
+        
+    </form>
+
+    <button type="button" id="bat">he button</button>
+
+    <button type="button" id="remm" >rem submit</button>
+
+
+<script>
+
+
+let f2=document.getElementById('bat')
+
+
+function remov()
+{
+    f2.removeEventListener('mouseover',addd)
+}
+
+function addd(){
+
+    document.body.style.backgroundColor='red'
+    f2.style.backgroundColor='green'
+    
+}
+
+
+
+f2.addEventListener('mouseover',addd)
+
+let f3=document.getElementById('remm')
+
+f3.addEventListener('mouseover',remov)
+
+
+
+
+    const myfun =()=>{
+        alert('hemlolld')
+
+    }
+const change_color=()=>{
+    document.getElementById('field').style.backgroundColor='#e2e2e2'
+
+}
+const update_text=()=>{
+    let data=document.getElementById('field').value
+    document.getElementById('heading').innerHTML=data
+}
+
+
+const form_submit= e=>{
+    // e.preventDefault()
+
+}
+
+
+</script>
+    
+</body>
+</html>

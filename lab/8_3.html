@@ -1,0 +1,64 @@
+<select id="category">
+  <option value="electronics">Electronics</option>
+  <option value="grocery">Grocery</option>
+  <!-- Add more categories as needed -->
+</select>
+
+<div>
+  <select id="product">
+    <!-- Options will be dynamically populated based on the selected category -->
+  </select>
+</div>
+
+<div>
+  <label for="quantity">quantity : </label>
+  <input type="text" id="quantity" />
+</div>
+
+<div>
+  <label for="price">price :</label>
+  <input type="text" id="price" />
+</div>
+
+<button type="button">submit</button>
+
+<button type="button">clear</button>
+
+<script>
+  var electronicsProducts = ["television", "laptop", "phone"];
+  var groceryProducts = ["soap", "powder"];
+
+  var categorySelect = document.getElementById("category");
+  var productSelect = document.getElementById("product");
+
+  categorySelect.addEventListener("change", function () {
+    // Clear previous options
+    productSelect.innerHTML = "";
+
+    // Get selected category
+    var selectedCategory = categorySelect.value;
+
+    // Populate product options based on the selected category
+    var products =
+      selectedCategory === "electronics"
+        ? electronicsProducts
+        : groceryProducts;
+
+    // Add options to the product select element
+    products.forEach(function (product) {
+      var option = document.createElement("option");
+      option.value = product.toLowerCase(); // Set the value as the lowercase product name
+      option.text = product;
+      productSelect.appendChild(option);
+    });
+  });
+</script>
+
+<style>
+  /* Optional: Style the select elements */
+  select {
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 16px;
+  }
+</style>

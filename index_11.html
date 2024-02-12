@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for..in/for..of</title>
+</head>
+<body>
+    <h1>for in</h1>
+    <script>
+        let st1=
+        {
+            name:'din',
+            phone:1111,
+            address:'hyderabad'
+        }
+console.log(typeof st1)
+
+for(let k in st1){
+    console.log(st1[k])
+}
+
+let ar=['abc','bcd','shss']
+
+
+// for(let k in ar){
+//     console.log(ar[k])
+// }
+
+for(item of ar){
+    console.log(item)
+}
+
+    </script>
+</body>
+</html>

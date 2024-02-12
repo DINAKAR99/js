@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js timers</title>
+</head>
+<body>
+    
+    <h1>js timers</h1>
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+    <script>
+
+
+//setTimeout --- for delay
+//setinterval --- for repeated afte some tiime
+        const mycode=()=>{
+            console.log('hey im js')
+            console.log(' how arew yoy ')
+        }
+
+        let timer
+
+        const start=()=>{
+            // mycode()
+            // setTimeout(mycode,5000)// after 5 sec it will be called
+
+        timer=setInterval(mycode,2000)
+        console.log(timer)
+
+
+
+        }
+
+
+        const stop=()=>{
+            clearInterval(timer)
+        }
+
+        
+    </script>
+</body>
+</html>

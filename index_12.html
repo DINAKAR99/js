@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects in js</title>
+</head>
+<body>
+    <h1> objects in js </h1>
+    <script>
+        const ob=
+        {
+            name:'abc',
+            age:22,
+            address:'hyd',
+            phone:2929292929,
+            'last name':'hero',
+            display:function(){
+                    console.log(this.name)
+                    console.log(this.age)
+                    console.log(this.phone)
+                    console.log(this['last name'])
+            }
+        }
+
+        // console.log(ob['last name'])
+        // console.log(typeof ob)
+
+        ob.display()
+        ob['display']()
+
+        for(let key in ob){
+            console.log(`${key} ------>  ${ob[key]}`)
+        }
+        /////chaning values of properties
+        ob.name='abbbbbb'
+        ob['name']='derr'
+        console.log(ob.name)
+        ///// dynamic adding of properties
+
+        ob.email='raj@gmail.com'
+        console.log(ob.email)
+
+        ////////deletinh properties
+
+        delete ob.email
+        console.log(ob)
+
+
+
+    </script>
+</body>
+</html>

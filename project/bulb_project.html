@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bulb project</title>
+
+   <style>
+    img{
+        padding: 50px;
+    }
+    button{
+        border-radius: 2px;
+        border: 2px solid brown;
+        
+    }
+
+   </style>
+</head>
+<body>
+    <button id="1" onclick="turnOn()">TURN ON</button>
+    <button id="2" onclick="turnOff()"> TURN OFF</button>
+    <button id="3" onclick="On()">ON</button>  
+
+    <div>
+        <img id='boma' onclick="On()" src="pic_bulbon.gif" alt="">
+    </div>
+
+    <script>
+ const turnOff=()=>{
+    let g1=document.getElementById('boma')
+    g1.setAttribute('src','pic_bulboff.gif')
+    let s2=document.getElementById('3')
+    s2.innerHTML='ON'
+
+
+    
+
+ }
+ const turnOn=()=>
+ {
+    let g1=document.getElementById('boma')
+    g1.setAttribute('src','pic_bulbon.gif')
+    let s2=document.getElementById('3')
+    s2.innerHTML='OFF'
+
+    
+
+ }
+ const On=()=>{
+    let g1=document.getElementById('boma')
+    let s1=g1.getAttribute('src')
+    let s2=document.getElementById('3')
+    
+
+    if(s1=='pic_bulbon.gif'){
+       turnOff()
+       
+       s2.innerHTML='ON'
+       
+    }
+    else{
+        turnOn()
+        s2.innerHTML='OFF'
+    }
+    
+
+ }
+
+
+    </script>
+
+</body>
+</html>

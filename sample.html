@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="1">hello</p>
+
+    <script>
+
+        //     /////////   SET
+
+        // const f1=new Set(['a','b','c','c','c']) ///set in js  only unique values
+        // f1.add('d')
+        // f1.add('e')//////////addding elements to the set 
+        // f1.delete('e')//////////deleting from set
+        // console.log(f1.has('d'))
+
+        // let l1=''
+        // /////////for each method on set
+        // f1.forEach(element => { 
+        //     l1+=element +'<br>'
+            
+        // });
+     
+        // document.getElementById('1').innerHTML=l1
+
+
+        /////////////// MAPS
+
+        ////key can be any datatype
+        //// holds the insertion order
+
+        const f2=new Map([  ['a',1] ,['b',2],['c',3] ])
+        document.getElementById('1').innerHTML=f2.get('a')
+
+        f2.set('d',4)  //// can insert new values
+        f2.set(1000,5)/// key can be any datatype
+
+        f2.set('a',10 )//// can be used to modify existing values
+
+        console.log(f2.get('a')) // get ---- for retrieving the values
+        console.log(f2.size) // get ---- for retrieving the size
+
+        f2.delete('e')/// for deleting the elements
+        console.log(f2)
+
+                let l2='    '
+        console.log(f2.has('a')) //// for checking if a elemnt is presento or not
+
+
+        ////for each in maps
+       f2.forEach((value,key)=>{
+        l2+=`${key} --> ${value} <br>`
+       })
+
+        //  document.getElementById('1').innerHTML=l2
+
+    //    console.log(f2.entries())
+
+       ///or
+
+       for(i of f2.entries()){
+        l2+i
+       }
+
+       document.getElementById('1').innerHTML=l2
+        
+///////// ITERABLES  -- can loop over elments of iterable objs like arrays
+////can be iterated by for..of
+
+const f3='ninja storm'
+
+// for(i of f3){
+//     console.log(i)
+// }
+
+//  const f4=[1,2,3,4,5]
+//  for(i of f4){
+//     console.log(i)
+// }
+
+// const f5= new Set([1,2,3,4,5])
+//  for(i of f5){
+//     console.log(i)
+// }
+
+
+// const f6= new Map([['a',1],['b',2]])
+//  for(i of f6){
+//     console.log(i)
+// }
+
+
+//ARRAY METHODS
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"]
+console.log(fruits.length) // for length of array
+
+console.log(fruits.toString()) // converts into string like  a,n,b,c
+ 
+console.log(fruits.join(' # ')) // join works the same but it separates the elemns by a other element
+
+console.log(fruits.pop()) // returns the value poped
+console.log(fruits.push('TAMARIND')) // pushes the value
+console.log(fruits.toString())
+
+console.log(fruits.shift())// returs the first removed value
+console.log(fruits.unshift('pomagranate'))// adds the elemnt to first place
+
+
+console.log(fruits.splice(1,1)) //// splices (removes) the  sub  array (pos, number of elemts to be spliced)
+
+console.log(fruits.splice(2,0,'apple','onion')) // can also used to add elemts by (pos, numb of elems)
+
+console.log(fruits)
+
+
+delete fruits[0] // can delete the elemts butt leaves a undefined space at the deleted place
+
+console.log(fruits)
+
+
+///concat  -- to add two arrays -- doesnt change old array -- returns new arrrau -- can take many argumnets
+const cars = ["BMW", "AUDI", "RANNGEROVER", "BENTLY"]
+const mix =fruits.concat(cars)
+console.log(mix)
+
+
+//can also take strings as args 
+console.log(mix.concat('robo'))
+
+
+///flattening
+
+const myArr = [[1,2],[3,4],[5,[6,pap]]]
+
+console.log(myArr.flat())
+
+
+///slice used to create a new sub array 
+//slice(pos, upto(pos))
+//if end is ommited it clears all the array to the end
+
+
+////////All JavaScript objects have a toString() method.
+
+//ajax,jquery,json  
+
+
+
+
+
+    </script>
+
+
+
+
+
+</body>
+</html>
